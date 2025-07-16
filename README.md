@@ -110,9 +110,7 @@ Detailed performance metrics, confusion matrices, and training curves are availa
 - `FocalResNet-results/` - ResNet50 + Focal Loss results
 - `General-Results/` - Dataset visualizations and comparative analysis
 
-## Conclusion
-
-The study demonstrates that:
-- Transfer learning improves model performance for DR imaging
-- EfficientNet-B7 with Cross-Entropy Loss provides the most stable and accurate results for DR classification
-- Pre-training on larger, diverse datasets followed by fine-tuning on high-quality clinical data is an effective strategy for automated DR detection 
+## Acknowledgment:
+The implementation for EfficientNet-B7 with Cross-Entropy loss was inspired from 
+(https://www.kaggle.com/code/sayedmahmoud/diabetic-retinopathy-detection). All other models, training scripts,
+and evaluations were developed independently by the author
