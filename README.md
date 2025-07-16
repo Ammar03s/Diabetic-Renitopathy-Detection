@@ -70,10 +70,6 @@ The experiments are implemented in three Jupyter notebooks:
 #### 2015 Dataset Training vs 2019 Fine-tuning
 All three model configurations showed significant improvement when fine-tuned on the cleaner 2019 dataset compared to training only on the 2015 dataset.
 
-#### Final Model Rankings (2019 Fine-tuned)
-1. **EfficientNet-B7 + Cross-Entropy Loss** (Best)
-2. EfficientNet-B7 + Focal Loss  
-3. ResNet50 + Focal Loss
 
 ### Results Visualization
 Detailed performance metrics, confusion matrices, and training curves are available in the `Code-Results/` directory:
@@ -85,6 +81,6 @@ Detailed performance metrics, confusion matrices, and training curves are availa
 ## Conclusion
 
 The study demonstrates that:
-- Transfer learning significantly improves model performance for medical imaging tasks
+- Transfer learning improves model performance for DR imaging
 - EfficientNet-B7 with Cross-Entropy Loss provides the most stable and accurate results for DR classification
 - Pre-training on larger, diverse datasets followed by fine-tuning on high-quality clinical data is an effective strategy for automated DR detection 
