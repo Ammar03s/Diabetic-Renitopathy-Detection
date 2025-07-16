@@ -7,13 +7,13 @@ Diabetic retinopathy (DR) is one of the leading causes of vision loss worldwide,
 Currently, DR diagnosis relies on manual evaluation of retinal fundus images by trained medical professionals, which is:
 - Time-consuming and difficult to scale, especially in developing countries with limited medical expertise
 
-This project aims to study 3 different approaches for DR severity classification using CNN to improve screening efficiency and coverage.
+This project aims to study 3 different approaches for DR severity classification using different CNN Architectures and Loss functions to improve screening efficiency and coverage.
 
 ## Datasets
 
-Two datasets were used in this study:
+2 datasets were used in this study:
 
-### 1. 2015 Kaggle Dataset (Pre-training)
+### 1. 2015 DR Dataset (Pre-training)
 - **Size**: ~35,000 retinal fundus images
 - **Labels**: 5-class scale (0: No DR → 4: Proliferative DR)
 - **Source**: [Diabetic Retinopathy Detection Competition](https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized)
