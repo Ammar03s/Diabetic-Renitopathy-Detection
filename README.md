@@ -2,14 +2,12 @@
 
 ## Problem Statement
 
-Diabetic retinopathy (DR) is one of the leading causes of vision loss worldwide, affecting over 25% of individuals with diabetes. With more than 300 million people diagnosed with diabetes globally, early detection and treatment are crucial for preventing vision loss.
+Diabetic retinopathy (DR) is one of the leading causes of vision loss worldwide, affecting over 25% of individuals with diabetes. With +300 million people diagnosed with diabetes globally, early detection and can be crucial for tratement and possiblt preventing vision loss.
 
 Currently, DR diagnosis relies on manual evaluation of retinal fundus images by trained medical professionals, which is:
-- Time-consuming
-- Subjective 
-- Difficult to scale, especially in developing countries with limited medical expertise
+- Time-consuming and difficult to scale, especially in developing countries with limited medical expertise
 
-This project aims to automate DR severity classification using deep learning models to improve screening efficiency and coverage.
+This project aims to study 3 different approaches for DR severity classification using CNN to improve screening efficiency and coverage.
 
 ## Datasets
 
@@ -27,18 +25,18 @@ Two datasets were used in this study:
 - **Source**: [APTOS 2019 Blindness Detection](https://www.kaggle.com/c/aptos2019-blindness-detection/data)
 - **Purpose**: Fine-tuning pre-trained models
 
-**Challenge**: Both datasets exhibit significant class imbalance with most images labeled as "No DR".
+**Challenge**: Both of the datasets exhibit significant class imbalance with most images labeled as "No DR" (normal in the real-world)
 
 ## Methodology
 
 ### Transfer Learning Approach
-All models used **transfer learning** with pre-trained weights from ImageNet, then adapted for medical imaging:
+All models used **transfer learning** with pre-trained weights, then adapted for medical imaging:
 
 1. **Stage 1**: Train on 2015 dataset (large, diverse)
 2. **Stage 2**: Fine-tune on 2019 dataset (smaller, higher quality)
 
 ### Model Configurations Tested
-Three different configurations were implemented and compared:
+3 different configurations were implemented and compared:
 
 1. **EfficientNet-B7 + Cross-Entropy Loss**
 2. **EfficientNet-B7 + Focal Loss** 
