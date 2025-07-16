@@ -1,5 +1,9 @@
 # Diabetic Retinopathy Detection using Deep Learning
 
+## Sample Retinal Images by DR Severity
+![DR Severity Samples](images/data-sample2015.png)
+*Figure 1: Sample retinal fundus images showing the progression of diabetic retinopathy severity from No DR to Proliferative DR*
+
 ## Problem Statement
 
 Diabetic retinopathy (DR) is one of the leading causes of vision loss worldwide, affecting over 25% of individuals with diabetes. With +300 million people diagnosed with diabetes globally, early detection and can be crucial for tratement and possiblt preventing vision loss.
@@ -70,13 +74,43 @@ The experiments are implemented in three Jupyter notebooks:
 #### 2015 Dataset Training vs 2019 Fine-tuning
 All three model configurations showed significant improvement when fine-tuned on the cleaner 2019 dataset compared to training only on the 2015 dataset.
 
+#### EfficientNet-B7 + Cross-Entropy Loss
+| Training Stage | Accuracy | Weighted F1-Score |
+|----------------|----------|-------------------|
+| 2015 Training  | 73%      | 0.70              |
+| 2019 Fine-tuned| 80%      | 0.76              |
+
+![CrossEntropy 2015](images/cross-effecient-15results.png) ![CrossEntropy 2019](images/cross-effecient-19results.png)
+
+#### EfficientNet-B7 + Focal Loss  
+| Training Stage | Accuracy | Weighted F1-Score |
+|----------------|----------|-------------------|
+| 2015 Training  | 70%      | 0.68              |
+| 2019 Fine-tuned| 76%      | 0.71              |
+
+![FocalEfficientNet 2015](images/focalEffecient-15results.png) ![FocalEfficientNet 2019](images/focalEffecient-19results.png)
+
+#### ResNet50 + Focal Loss
+| Training Stage | Accuracy | Weighted F1-Score |
+|----------------|----------|-------------------|
+| 2015 Training  | 62%      | 0.61              |
+| 2019 Fine-tuned| 73%      | 0.71              |
+
+![FocalResNet 2015](images/focal-resnet-15results.png) ![FocalResNet 2019](images/focal-resnet-19results.png)
+
+#### Final Model Rankings (2019 Fine-tuned)
+1. **EfficientNet-B7 + Cross-Entropy Loss** - 80% accuracy (Best)
+2. **EfficientNet-B7 + Focal Loss** - 76% accuracy  
+3. **ResNet50 + Focal Loss** - 73% accuracy
 
 ### Results Visualization
-Detailed performance metrics, confusion matrices, and training curves are available in the `Code-Results/` directory:
-- `CrossEffecient-results/` - EfficientNet-B7 + Cross-Entropy results
-- `FocalEffecient-results/` - EfficientNet-B7 + Focal Loss results  
-- `FocalResNet-results/` - ResNet50 + Focal Loss results
-- `General-Results/` - Dataset visualizations and comparative analysis
+For GitHub setup, create an `images/` folder in your repository and include:
+- `data-sample2015.png` - Sample retinal images by DR severity
+- `cross-effecient-15results.png` & `cross-effecient-19results.png` - CrossEntropy results  
+- `focalEffecient-15results.png` & `focalEffecient-19results.png` - EfficientNet Focal Loss results
+- `focal-resnet-15results.png` & `focal-resnet-19results.png` - ResNet50 Focal Loss results
+
+Additional detailed confusion matrices and training curves are available in the original `Code-Results/` directory.
 
 ## Conclusion
 
