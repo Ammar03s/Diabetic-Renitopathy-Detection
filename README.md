@@ -33,8 +33,8 @@ This project aims to study 3 different approaches for DR severity classification
 
 ## Methodology
 
-### Transfer Learning Approach
-All models used **transfer learning** with pre-trained weights, then adapted for medical imaging:
+### Learning Approach
+All models used **Progressive learning** with pre-trained weights, then adapted for medical imaging:
 
 1. **Stage 1**: Train on 2015 dataset (large, diverse)
 2. **Stage 2**: Fine-tune on 2019 dataset (smaller, higher quality)
